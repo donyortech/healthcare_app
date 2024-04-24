@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthLink Scheduler</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Custom Styles -->
+    <style>
+      /* Card Styles */
+      .card {
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+        height: 100%; /* Allow the cards to adjust their height based on content */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-body {
+        padding: 1rem;
+        height: 300px; /* Set a fixed height for all card bodies */
+      }
+
+      .card-footer {
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        padding: 0.75rem 1rem;
+      }
+
+      /* Container Styles */
+      .card-container {
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Include the navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- About section -->
+    <div class="jumbotron bg-light text-dark" style="margin-bottom: 0">
+      <div class="container">
+        <h5 class="display-3 text-center mb-4">
+          Health Care Appointment Scheduling System
+        </h5>
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3>Need an Appointment?</h3>
+            <p class="lead">
+              Get immediate assistance by scheduling an appointment now!
+            </p>
+            <a class="btn btn-danger btn-lg" href="/patientclick" role="button">
+              Take Appointment Now!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container for Cards -->
+    <div class="container card-container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <i class="fas fa-user-md fa-5x text-primary mx-auto mt-4"></i>
+            <div class="card-body text-center">
+              <h5 class="card-title">ADMIN</h5>
+              <p class="card-text">
+                Manage system administrators and settings.
+              </p>
+              <a href="/adminclick" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <i class="fas fa-user-md fa-5x text-success mx-auto mt-4"></i>
+            <div class="card-body text-center">
+              <h5 class="card-title">DOCTOR</h5>
+              <p class="card-text">
+                Access patient information and medical records.
+              </p>
+              <a href="/doctorclick" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <i class="fas fa-user fa-5x text-info mx-auto mt-4"></i>
+            <div class="card-body text-center">
+              <h5 class="card-title">PATIENT</h5>
+              <p class="card-text">
+                Schedule appointments and view medical history.
+              </p>
+              <a href="/patientclick" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include 'footer.html' %}
+    <!-- Bootstrap JS and jQuery (optional, only if you need dropdowns or other JS features) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
